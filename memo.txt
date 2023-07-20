@@ -1,0 +1,16 @@
+■ Windowsでyarnが実行できない
+
+・ポリシーを変更する必要がある
+参考：https://labor.ewigleere.net/2020/06/04/yarn-powershell/
+
+■ 途中から「yarn dev」するとエラーになる
+
+・Node.jsのバージョンが高すぎる (16.20.1などを使用する)
+・nvmを入れてバージョンの低いNode.jsを使用する
+
+・「nvm list available」で使用可能なバージョンの一覧を表示
+・「nvm install {version}」でNode.jsをインストール
+・「nvm use {version}」でバージョンを切り替え
+
+参考：https://qiita.com/akitkat/items/f455bbc088a408cbc3a5
+参考：https://fumidzuki.com/knowledge/4533/
