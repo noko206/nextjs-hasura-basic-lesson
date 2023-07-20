@@ -14,3 +14,14 @@
 
 参考：https://qiita.com/akitkat/items/f455bbc088a408cbc3a5
 参考：https://fumidzuki.com/knowledge/4533/
+
+■ 15.Automatic types generation by codegen
+
+・クエリを作成するときはHasuraからコピーしてくると便利
+・@clientをつけるとクライアントサイドのキャッシュから実行してくれる
+・型の「!」は必須の意味
+・「yarn gen-types」でType型を生成（同じ名前のクエリが存在するとエラーになる）
+
+■ 17. Layout component
+
+
