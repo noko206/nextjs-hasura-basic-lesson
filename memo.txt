@@ -24,4 +24,14 @@
 
 ■ 17. Layout component
 
+■ 18. State management in Apollo Client
+
+・StateManagement
+　- REST API with Redux (useContext + useState)
+　- GraphQL with Apollo Client
+
+■ 19. makeVar + useReactiveVar
+
+・cache.tsに管理したいstateの定義を記述
+・Componentからcache.tsのstateを呼び出して、値の更新などを行う
 
