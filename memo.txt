@@ -56,5 +56,8 @@
 ■ 22. Full understanding of fetch policy
 
 ・4つのフェッチポリシー
-・
+　- fetchPolicy: 'network-only：常にサーバサイドからデータ取得する（キャッシュは保存する）
+　- fetchPolicy: 'cache-and-network'：サーバサイドからデータ取得するが、取得までの間はキャッシュを使用する
+　- fetchPolicy: 'cache-first'：キャッシュがあれば使用する(デフォルト)
+　- fetchPolicy: 'no-cache'：常にサーバサイドからデータ取得する（キャッシュに保存しない）
 
