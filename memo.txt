@@ -35,3 +35,13 @@
 ・cache.tsに管理したいstateの定義を記述
 ・Componentからcache.tsのstateを呼び出して、値の更新などを行う
 
+■ 20. Integration of Nextjs/Apollo client with Hasura
+
+・HasuraとNext.jsの連携をした
+・連携の仕方は公式がサンプルを提供している
+　→　githubのvercel/next.jsのnext.js/examples/with-apollo/lib/apolloClient.js
+・SSGやSSRなどサーバサイド処理では必ず新規のApolloClientインスタンスを生成しなければならない
+・types/generated/graphql.tsxのTypeには規則がある
+　→　queryの末尾に「Query」をつけられるだけ
+・ApolloClientのqueryは正規化される（キャッシュを取れるようにするため）
+　
