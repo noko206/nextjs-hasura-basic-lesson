@@ -13,7 +13,7 @@ export type Scalars = {
   Int: number;
   Float: number;
   timestamptz: any;
-  uuid: any;
+  uuid: string;
 };
 
 
@@ -1468,29 +1468,29 @@ export type GetUserIdsQueryVariables = Exact<{ [key: string]: never; }>;
 export type GetUserIdsQuery = { __typename?: 'query_root', users: Array<{ __typename?: 'users', id: any }> };
 
 export type GetUserByIdQueryVariables = Exact<{
-  id: Scalars['uuid']['input'];
+  id: Scalars['uuid'];
 }>;
 
 
 export type GetUserByIdQuery = { __typename?: 'query_root', users_by_pk?: { __typename?: 'users', id: any, name: string, created_at: any } | null };
 
 export type CreateUserMutationVariables = Exact<{
-  name: Scalars['String']['input'];
+  name: Scalars['String'];
 }>;
 
 
 export type CreateUserMutation = { __typename?: 'mutation_root', insert_users_one?: { __typename?: 'users', id: any, name: string, created_at: any } | null };
 
 export type DeleteUserMutationVariables = Exact<{
-  id: Scalars['uuid']['input'];
+  id: Scalars['uuid'];
 }>;
 
 
 export type DeleteUserMutation = { __typename?: 'mutation_root', delete_users_by_pk?: { __typename?: 'users', id: any, name: string, created_at: any } | null };
 
 export type UpdateUserMutationVariables = Exact<{
-  id: Scalars['uuid']['input'];
-  name: Scalars['String']['input'];
+  id: Scalars['uuid'];
+  name: Scalars['String'];
 }>;
 
 

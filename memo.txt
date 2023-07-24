@@ -77,3 +77,15 @@
 　- 親コンポーネントが再レンダリングされたとき
 ・メモ化することで同じpropsが渡されたときに再レンダリングしないようにできる
 
+■ 25. SSG + ISR with Apollo client
+
+・SSG/ISRの確認をするときはyarn buildからのyarn startをする
+・yarn build時に型周りでエラーが出る
+　→　['input']をすべて削除したら通った
+・デベロッパーツールの歯車から、DebuggerのDisable JavaScriptにチェックを入れると、JSを無効にできる
+・SSGはyarn build時にデータを取得して、静的なHTMLとして埋め込むことを指しているっぽい？
+・GetStaticPathsのreturn時にfallbackをtrueにしておくとCRUDでデータが変更されたときに、動的にページの作成も行ってくれる (ISR)
+
+【Incremental Static Regeneration】
+・通常、yarn buildで生成されたHTMLを受け取る
+・ISRを使用しておくとデータが更新されたときにHTMLも再生成される
