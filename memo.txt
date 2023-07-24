@@ -61,3 +61,10 @@
 　- fetchPolicy: 'cache-first'：キャッシュがあれば使用する(デフォルト)
 　- fetchPolicy: 'no-cache'：常にサーバサイドからデータ取得する（キャッシュに保存しない）
 
+■ 23. CRUD(Hasura) cache.modify
+
+・クエリがmutationの場合は、自動生成されたTypeの末尾にもMutationがつく
+・createとdeleteは自動でキャッシュが更新されない (updateはapolloが自動で更新してくれる)
+　→　自分で書く必要がある
+・cache.identifyでキャッシュのIDが取得できる (apolloの機能)
+・
