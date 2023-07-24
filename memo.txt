@@ -44,4 +44,17 @@
 ・types/generated/graphql.tsxのTypeには規則がある
 　→　queryの末尾に「Query」をつけられるだけ
 ・ApolloClientのqueryは正規化される（キャッシュを取れるようにするため）
-　
+
+■ 21. Direct access to cache (@client)
+
+・useQueryにfetchPolicyを指定することができ、キャッシュを使用しない設定にもできる
+　→　fetchPolicy: 'network-only'
+　→　これをない場合は、キャッシュがなければサーバサイドに、あればキャッシュを見に行く
+・デベロッパーツールのNetworkにあるFetch/XHRからクエリの動きが確認できる
+　→　graphql fetchはクライアントサイドからGraphQLにフェッチが行われたことを意味する
+
+■ 22. Full understanding of fetch policy
+
+・4つのフェッチポリシー
+・
+

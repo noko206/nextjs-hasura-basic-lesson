@@ -1,23 +1,15 @@
 import { VFC } from 'react'
 import Link from 'next/link'
 import { useQuery } from '@apollo/client'
-import { GET_USERS } from '../queries/queries'
+import { GET_USERS_LOCAL, GET_USERS } from '../queries/queries'
 import { GetUsersQuery } from '../types/generated/graphql'
 import { Layout } from '../components/Layout'
 
-const FetchMain: VFC = () => {
-  const { data, error } = useQuery<GetUsersQuery>(GET_USERS, {
-    fetchPolicy: 'network-only',
-  })
-  if (error)
-    return (
-      <Layout title="Hasura fetchPolicy">
-        <p>Error: {error.message}</p>
-      </Layout>
-    )
+const FetchSub: VFC = () => {
+  const { data } = useQuery<GetUsersQuery>(GET_USERS_LOCAL)
   return (
-    <Layout title="Hasura fetchPolicy">
-      <p className="mb-6 font-bold">Hasura main page</p>
+    <Layout title="Hasura fetchPolicy read cache">
+      <p className="mb-6 font-bold">Direct read out from cache</p>
       {console.log(data)}
       {data?.users.map((user) => {
         return (
@@ -26,11 +18,11 @@ const FetchMain: VFC = () => {
           </p>
         )
       })}
-      <Link href="/hasura-sub">
+      <Link href="/hasura-main">
         <a className="mt-6">Next</a>
       </Link>
     </Layout>
   )
 }
 
-export default FetchMain
+export default FetchSub
