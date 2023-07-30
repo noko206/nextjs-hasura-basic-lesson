@@ -97,3 +97,33 @@
 　→　第2引数に依存関係を指定することができ、その値が変更されたら関数も再生成される
 ・カスタムフックで使用する関数は基本的にuseCallbackを使用するのが推奨されている！！！！！
 
+■ 28. ReferenceError: setImmediate is not defined 対処法
+
+1. ReferenceError: document is not defined
+
+各テストファイルの先頭に下記3行を追加
+
+/**
+* @jest-environment jsdom
+*/
+
+2. ReferenceError: setImmediate is not defined
+
+「yarn add setimmediate」を実行するか、
+各テストファイルのimport部に下記を追加
+
+import 'setimmediate'
+
+■ 29. NavBar Test FAIL
+
+エラーが出た場合は下記を変更
+
+expect(await screen.findByText('makeVar')).toBeInTheDocument()
+↓
+expect(screen.getByText('makeVar')).toBeInTheDocument()
+
+■ 30. Test code of navigation + useQuery
+
+・getByTestIdでテストIDの要素を取得できる
+・findByTextで指定したテキストが書かれた要素を取得できる
+・userEvent.clickで要素をクリックすることができる

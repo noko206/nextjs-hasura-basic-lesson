@@ -8,8 +8,8 @@ import { Layout } from '../components/Layout'
 const FetchMain: VFC = () => {
   const { data, error } = useQuery<GetUsersQuery>(GET_USERS, {
     // fetchPolicy: 'network-only',
-    // fetchPolicy: 'cache-and-network',
-    fetchPolicy: 'cache-first',
+    fetchPolicy: 'cache-and-network',
+    // fetchPolicy: 'cache-first',
     // fetchPolicy: 'no-cache',
   })
   if (error)
