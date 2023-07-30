@@ -9,7 +9,6 @@
     "lint": "next lint",
     "test": "jest --env=jsdom --verbose",
     "gen-types": "graphql-codegen --config codegen.yml",
-    "develop": "NODE_OPTIONS='--openssl-legacy-provider' gatsby develop"
   },
   "dependencies": {
     "@apollo/client": "3.3.15",
