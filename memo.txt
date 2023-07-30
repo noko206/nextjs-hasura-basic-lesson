@@ -127,3 +127,11 @@ expect(screen.getByText('makeVar')).toBeInTheDocument()
 ・getByTestIdでテストIDの要素を取得できる
 ・findByTextで指定したテキストが書かれた要素を取得できる
 ・userEvent.clickで要素をクリックすることができる
+
+■ 31. Test code of CRUD + SSG pages
+
+・いろんなテストを書いた
+
+■ 32. Protection of Hasura endpoint
+
+
