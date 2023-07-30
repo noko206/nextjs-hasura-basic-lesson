@@ -156,3 +156,11 @@ expect(screen.getByText('makeVar')).toBeInTheDocument()
 ・jestのテストは環境変数を読み込んでくれない
 　→　.env.test.localファイルを作成する
 　→　それでもエラーが出る場合は、すべてのテストファイルで環境変数を定義する記述を追加する
+
+・デプロイ時にエラーが出たとき
+　- Next.jsのバージョンを上げるか、eslintのバージョンを下げればよさそう
+　- 今回はNext.jsのバージョンが指定されているので、eslintのバージョンを下げることにした
+　- $ yarn remove eslint
+　- $ yarn add --dev eslint@7.32.0
+
+参考：https://stackoverflow.com/questions/69680502/error-eslint-must-be-installed-yarn-add-dev-eslint
