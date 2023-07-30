@@ -63,7 +63,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 * JS/TS のテストフレームワーク
 * data-testid 属性を設定してテストを行う
-* クエリに対応するダミーデータを作成できる
+* クエリに対応するダミーデータを作成できる（これはGraphQLとセットで）
 * テスト例
   * ○○ というテキストが表示されているか？
   * リンク押下で正しく画面遷移できるか？
