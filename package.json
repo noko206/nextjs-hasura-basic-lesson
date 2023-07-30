@@ -53,5 +53,8 @@
     "moduleNameMapper": {
       "\\.(css)$": "<rootDir>/node_modules/jest-css-modules"
     }
+  },
+  "engines": {
+    "node": ">=16.0.0 <17.0.0"
   }
 }

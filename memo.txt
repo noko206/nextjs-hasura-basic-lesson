@@ -169,3 +169,8 @@ expect(screen.getByText('makeVar')).toBeInTheDocument()
 　- 下記を試してみる
 
 参考：https://qiita.com/akitkat/items/f455bbc088a408cbc3a5
+
+　- うまくいかん！
+　- 次はこれ
+
+参考：https://github.com/nuxt/vercel-builder/issues/761
