@@ -134,4 +134,18 @@ expect(screen.getByText('makeVar')).toBeInTheDocument()
 
 ■ 32. Protection of Hasura endpoint
 
+・Hasuraのエンドポイントはデフォルトだと誰でもアクセスできて保護されていない状態
+・プロテクトする方法は2つ
+　- JWTトークンを使って認証をかける方法
+　- Hasura admin secretというシークレットキーを設定する方法（講座ではこっち！）
 
+1. HasuraのProject一覧の歯車マークをクリック
+2. Env varsタグをクリックし、New Env varsタグをクリック
+3. HASURA_GRAPHQL_ADMIN_SECRETを選択
+4. Valueに複雑なパスワードを作成して入力
+5. Addをクリック
+
+・HasuraのRequest Headersにx-hasura-admin-secretが追加される
+・環境変数を作成してNext.jsで使えるようにする
+・.env.localファイルを作成して、先ほど作成したパスワードを環境変数として登録
+・lib/apolloClientファイルを修正して、ヘッダーにパスワードを含めるように変更する
