@@ -77,7 +77,7 @@
 　- 親コンポーネントが再レンダリングされたとき
 ・メモ化することで同じpropsが渡されたときに再レンダリングしないようにできる
 
-■ 25. SSG + ISR with Apollo client
+■ 26. SSG + ISR with Apollo client
 
 ・SSG/ISRの確認をするときはyarn buildからのyarn startをする
 ・yarn build時に型周りでエラーが出る
@@ -89,3 +89,11 @@
 【Incremental Static Regeneration】
 ・通常、yarn buildで生成されたHTMLを受け取る
 ・ISRを使用しておくとデータが更新されたときにHTMLも再生成される
+
+■ 27. Custom Hook + useCallback + memo
+
+・memo化してても、異なるpropsが渡されたら再レンダリングされてしまう
+・useCallbackを使用すると関数を再利用してくれる
+　→　第2引数に依存関係を指定することができ、その値が変更されたら関数も再生成される
+・カスタムフックで使用する関数は基本的にuseCallbackを使用するのが推奨されている！！！！！
+
