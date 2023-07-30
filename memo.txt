@@ -149,3 +149,10 @@ expect(screen.getByText('makeVar')).toBeInTheDocument()
 ・環境変数を作成してNext.jsで使えるようにする
 ・.env.localファイルを作成して、先ほど作成したパスワードを環境変数として登録
 ・lib/apolloClientファイルを修正して、ヘッダーにパスワードを含めるように変更する
+
+■ 35. Deploy to Vercel
+
+・VercelのProject Settings -> General -> Node.js Versionで 16.xを選択SaveしてからDeployするようにする
+・jestのテストは環境変数を読み込んでくれない
+　→　.env.test.localファイルを作成する
+　→　それでもエラーが出る場合は、すべてのテストファイルで環境変数を定義する記述を追加する
