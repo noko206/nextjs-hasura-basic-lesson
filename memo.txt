@@ -164,3 +164,8 @@ expect(screen.getByText('makeVar')).toBeInTheDocument()
 　- $ yarn add --dev eslint@7.32.0
 
 参考：https://stackoverflow.com/questions/69680502/error-eslint-must-be-installed-yarn-add-dev-eslint
+
+　- 直らない……
+　- 下記を試してみる
+
+参考：https://qiita.com/akitkat/items/f455bbc088a408cbc3a5
